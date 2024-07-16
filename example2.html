@@ -7,17 +7,18 @@
   <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" type="text/javascript"></script>
   <link href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css" rel="stylesheet">
   <script type="text/javascript">
-    let obj = null
       document.addEventListener('DOMContentLoaded', () => {
-        obj = new window.CDEKWidget({
+        new window.CDEKWidget({
                                     apiKey: '75cb6000-eca6-4f8f-ab19-8486f57505cb',
                                     defaultLocation: 'Москва',
-                                    servicePath: 'https://robobug.ru/service.php'
+                                    from: 'Санкт-Петербург',
+                                    servicePath: 'https://robobug.ru/service.php',
+                                    onCalculate(tariffs, address) {
+                                        alert('Была рассчитана стоимость доставки');
+                                        console.log('Подсчитаны тарифы', tariffs);
+                                        console.log('Адрес подсчета', address);
+                                    },
                                 });
-        obj.on('pvz-select', function(pvz) {
-          // pvz содержит информацию о выбранном пункте выдачи
-          console.log('Selected PVZ:', pvz)
-        })
       })
   </script>
 </head>
