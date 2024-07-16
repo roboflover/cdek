@@ -13,6 +13,13 @@
                                     defaultLocation: 'Москва',
                                     from: 'Санкт-Петербург',
                                     servicePath: 'https://robobug.ru/service.php',
+                                    goods: [
+                                        {
+                                            length: 10,
+                                            width: 10,
+                                            height: 10,
+                                            weight: 1,
+                                        }],
                                     onCalculate(tariffs, address) {
                                         alert('Была рассчитана стоимость доставки');
                                         console.log('Подсчитаны тарифы', tariffs);
@@ -23,6 +30,6 @@
   </script>
 </head>
 <body>
-  <p class="m-2">Пример установки виджета</p>
+  <p class="m-2">Пример установки виджета2</p>
 </body>
 </html>
