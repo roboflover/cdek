@@ -20,10 +20,11 @@
                                             height: 10,
                                             weight: 1,
                                         }],
-                                    onCalculate(tariffs, address) {
-                                        alert('Была рассчитана стоимость доставки');
-                                        console.log('Подсчитаны тарифы', tariffs);
-                                        console.log('Адрес подсчета', address);
+                                    onCalculate(tariffs, address, prices) {
+                                        console.log(prices.office[0].delivery_sum)
+                                        // alert('Была рассчитана стоимость доставки');
+                                        // console.log('Подсчитаны тарифы', tariffs);
+                                        // console.log('Адрес подсчета', address);
                                     },
                                 });
       })
